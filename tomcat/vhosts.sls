@@ -22,4 +22,5 @@
             disableUploadTimeout: {{ salt['pillar.get']('tomcat:connector:disableUploadTimeout', 'true') }}
             acceptCount: {{ salt['pillar.get']('tomcat:connector:acceptCount', 100) }}
             scheme: {{ salt['pillar.get']('tomcat:connector:scheme', 'http') }}
+            secure: {{ salt['pillar.get']('tomcat:connector:secure') }}
 
