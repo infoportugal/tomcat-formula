@@ -10,4 +10,16 @@
         - defaults:
             sites: {{ salt['pillar.get']('tomcat:sites').items()|json }}
             SSLEnabled: 'false'
+            port: {{ salt['pillar.get']('tomcat:connector:port', 8080) }}
+            protocol: {{ salt['pillar.get']('tomcat:connector:protocol', 'HTTP/1.1') }}
+            connectionTimeout: {{ salt['pillar.get']('tomcat:connector:connectionTimeout', 20000) }}
+            URIEncoding: {{ salt['pillar.get']('tomcat:connector:URIEncoding', 'UTF-8') }}
+            redirectPort: {{ salt['pillar.get']('tomcat:connector:redirectPort', 8443) }}
+            maxHttpHeaderSize: {{ salt['pillar.get']('tomcat:connector:maxHttpHeaderSize', 8192) }}
+            maxThreads: {{ salt['pillar.get']('tomcat:connector:maxThreads', 150) }}
+            minSpareThreads: {{ salt['pillar.get']('tomcat:connector:minSpareThreads', 25) }}
+            enableLookups: {{ salt['pillar.get']('tomcat:connector:enableLookups', 'false') }}
+            disableUploadTimeout: {{ salt['pillar.get']('tomcat:connector:disableUploadTimeout', 'true') }}
+            acceptCount: {{ salt['pillar.get']('tomcat:connector:acceptCount', 100) }}
+            scheme: {{ salt['pillar.get']('tomcat:connector:scheme', 'http') }}
 
