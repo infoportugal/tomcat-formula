@@ -23,4 +23,7 @@
             acceptCount: {{ salt['pillar.get']('tomcat:connector:acceptCount', 100) }}
             scheme: {{ salt['pillar.get']('tomcat:connector:scheme', 'http') }}
             secure: {{ salt['pillar.get']('tomcat:connector:secure') }}
-
+            clientAuth: {{ salt['pillar.get']('tomcat:connector:clientAuth', 'false') }}
+            sslProtocol: {{ salt['pillar.get']('tomcat:connector:sslProtocol', 'TLS') }}
+            keystoreFile: {{ salt['pillar.get']('tomcat:connector:keystoreFile') }}
+            keystorePass: {{ salt['pillar.get']('tomcat:connector:keystorePass', '') }}
