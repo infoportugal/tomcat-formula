@@ -9,4 +9,5 @@
         - template: jinja
         - defaults:
             sites: {{ salt['pillar.get']('tomcat:sites').items()|json }}
+            SSLEnabled: 'false'
 
